@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: red;
+}
+
+.content {
+    padding: 3rem;
+    max-width: 40rem;
+}
+
+.inline-img {
+    padding: 3rem;
+    display: inline-block;
+    max-width: 5rem;
+}
+
+.inline-text {
+    display: inline-block;
+    max-width: 30rem;
+}
