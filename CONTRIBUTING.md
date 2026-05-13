@@ -2,7 +2,7 @@
 
 ### Welcome
 
-This project is a part of [Web Development learning class](https://hattifnatt4r.github.io/sd). It is designed to help learn Git, HTML, CSS, JavaScript.
+This project is a part of [cambridge-dev.com](https://cambridge-dev.com) Web Development class. It is designed to help learn Git, HTML, CSS, JavaScript.
 
 See our Discord server for details (https://discord.gg/wAMEqRMbdm), or meet us in person at the Cambridge Public Library.
 

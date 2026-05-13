@@ -1,6 +1,6 @@
 # welcome--js
 
-This project is a part of [Web Development class](https://hattifnatt4r.github.io/sd): a sandbox repo to help start with Git, HTML, CSS, JavaScript.
+This is a sandbox project to help learn Git, HTML, CSS, JavaScript.
 
 The page shows cards in a pinterest-like layout, one card per developer. 
 
