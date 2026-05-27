@@ -563,6 +563,212 @@ form textarea {
     text-shadow: 1px 1px 0 #000;
 }
 
+/* === BROWSER GREETING BANNER === */
+.browser-greeting {
+    background: #000;
+    color: #00ff00;
+    border: 3px ridge #00ff00;
+    padding: 6px 10px;
+    margin: 0 0 14px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: inset 0 0 12px rgba(0, 255, 0, 0.3);
+}
+
+.browser-greeting .netscape {
+    background: rgba(255, 255, 0, 0.15);
+    padding: 0 4px;
+}
+
+.greet-star {
+    height: 28px;
+    width: auto;
+}
+
+/* === PET CAT === */
+.pet-cat {
+    display: block;
+    margin: 6px auto;
+    width: 90%;
+    height: auto;
+    background: #fff;
+    border: 2px inset #888;
+    cursor: pointer;
+    image-rendering: pixelated;
+}
+
+/* === NOW PLAYING === */
+.now-playing-box {
+    background: #001a3d;
+}
+
+#nowPlaying b {
+    color: #ffff00;
+    text-shadow: 1px 1px 0 #ff00ff;
+}
+
+/* === TOP 8 BUDDIES === */
+.buddy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 6px;
+    font-size: 13px;
+}
+
+.buddy-list a {
+    color: #00ffff;
+    text-decoration: underline;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.buddy-list a:hover {
+    color: #ff00ff;
+    background: #ffff00;
+}
+
+/* === VIRUS POPUP === */
+.virus-popup {
+    position: fixed;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-1deg);
+    z-index: 10001;
+    background: silver;
+    border: 4px outset #fff;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.55), 0 0 40px #ff00ff;
+    color: #000;
+    text-align: left;
+    max-width: 480px;
+    width: calc(100% - 32px);
+    animation: shake 0.7s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(-50%) rotate(-1deg); }
+    25%      { transform: translateX(-50%) rotate(0.8deg); }
+    50%      { transform: translateX(-50%) rotate(-0.6deg); }
+    75%      { transform: translateX(-50%) rotate(1deg); }
+}
+
+.virus-titlebar {
+    background: linear-gradient(90deg, #a40000, #ff3838);
+    color: #fff;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.virus-close {
+    background: silver;
+    color: #000;
+    border: 2px outset #fff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    padding: 0 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.virus-close:active {
+    border-style: inset;
+}
+
+.virus-body {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.virus-body p {
+    margin: 4px 0;
+}
+
+.virus-body a {
+    color: #0000ee;
+    font-weight: bold;
+}
+
+.virus-flame {
+    width: 48px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* === NEW! BADGE === */
+.new-badge {
+    display: inline-block;
+    background: #ff0000;
+    color: #ffff00;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    border: 2px outset #ffff00;
+    text-shadow: 1px 1px 0 #000;
+    animation: blink 0.6s steps(2, start) infinite;
+    vertical-align: middle;
+}
+
+/* === GEOCITIES NEIGHBORHOOD BOX === */
+.geocities-nbhd {
+    background: linear-gradient(160deg, #002080, #4b0082);
+    border-color: #ffff00;
+}
+
+.geocities-name {
+    color: #ffff00;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 #ff00ff;
+}
+
+/* === QUOTE OF THE DAY === */
+.quote-of-day {
+    font-style: italic;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 13px;
+    color: #fff200;
+    text-shadow: 1px 1px 0 #000;
+    line-height: 1.4;
+    padding: 4px 2px;
+}
+
+/* === CUSTOM SCROLLBARS === */
+html {
+    scrollbar-color: #ff00ff #000080;
+}
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background: #000080;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff00ff, #00ffff);
+    border: 2px outset #fff;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00ffff, #ff00ff);
+}
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
 /* === MUTE BUTTON === */
 #mute {
     position: fixed;

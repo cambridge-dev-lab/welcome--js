@@ -8,6 +8,48 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <!-- F A K E   V I R U S   P O P U P -->
+        <div id="virusPopup" class="virus-popup" hidden>
+            <div class="virus-titlebar">
+                <span>&#9888;&#65039; Microsoft Internet Explorer</span>
+                <button
+                    id="virusClose"
+                    type="button"
+                    class="virus-close"
+                    title="Close"
+                    aria-label="Close popup"
+                >
+                    X
+                </button>
+            </div>
+            <div class="virus-body">
+                <img
+                    class="virus-flame"
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/22/Animated_fire_by_nevit.gif"
+                    alt="fire"
+                />
+                <div>
+                    <p>
+                        <b>!!! WARNING !!!</b><br />
+                        Your computer has
+                        <span class="blink">37 VIRUSES</span> detected!
+                    </p>
+                    <p>
+                        Click <a href="#" id="virusFix">HERE</a> to fix
+                        immediately!
+                    </p>
+                    <p class="tiny" style="color: #555">
+                        (this is fake. close me)
+                    </p>
+                </div>
+                <img
+                    class="virus-flame"
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/22/Animated_fire_by_nevit.gif"
+                    alt="fire"
+                />
+            </div>
+        </div>
+
         <!-- A U D I O -->
         <audio id="bgm" preload="auto">
             <source
@@ -102,6 +144,85 @@
                         <h3 class="box-title">&#128197; TODAY</h3>
                         <p class="tiny center" id="todayDate"></p>
                     </div>
+
+                    <div class="box">
+                        <h3 class="box-title">&#128172; QUOTE OF THE DAY</h3>
+                        <p class="tiny center quote-of-day" id="quoteOfDay">
+                            ...
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h3 class="box-title">&#128221; LAST UPDATED</h3>
+                        <p class="tiny center" id="lastUpdated"></p>
+                    </div>
+
+                    <div class="box geocities-nbhd">
+                        <h3 class="box-title">&#127968; NEIGHBORHOOD</h3>
+                        <p class="tiny center">
+                            <span class="blink">&#128293;</span> a proud
+                            citizen of
+                            <br />
+                            <b class="geocities-name">
+                                GeoCities&nbsp;/&nbsp;CAMBRIDGE,&nbsp;MA
+                            </b>
+                            <br />
+                            <span class="tiny">&#127759; pop. 118,488</span>
+                            <span class="blink">&#128293;</span>
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h3 class="box-title">&#128008; MY PET CAT</h3>
+                        <p class="tiny center" style="margin: 4px 0">
+                            <b>Name:</b> Mr. Whiskerz
+                        </p>
+                        <img
+                            class="pet-cat"
+                            src="https://upload.wikimedia.org/wikipedia/commons/9/93/Transparent_Cartoon_Running_Cat.gif"
+                            alt="my pet cat"
+                        />
+                        <p class="tiny center">click 2 pet (it does nothing)</p>
+                    </div>
+
+                    <div class="box now-playing-box">
+                        <h3 class="box-title">&#127911; NOW PLAYING</h3>
+                        <p class="tiny center" id="nowPlaying">
+                            <i>nothing yet... click &#9658; to start!</i>
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h3 class="box-title">
+                            &#128110; TOP 8 BUDDIES
+                        </h3>
+                        <ul class="buddy-list">
+                            <li>
+                                <a href="../001_maria.html">&#128075; Maria</a>
+                            </li>
+                            <li>
+                                <a href="../003_dina.html">&#129412; Dina</a>
+                            </li>
+                            <li>
+                                <a href="../004_luke.html">&#128526; Luke</a>
+                            </li>
+                            <li>
+                                <a href="../005_aaron.html">&#127918; Aaron</a>
+                            </li>
+                            <li>
+                                <a href="../006_rafael.html">&#128520; Rafael</a>
+                            </li>
+                            <li>
+                                <a href="../007_ollie.html">&#127875; Ollie</a>
+                            </li>
+                            <li>
+                                <a href="../007_matt.html">&#128526; Matt</a>
+                            </li>
+                            <li>
+                                <a href="../008_yang.html">&#127752; Yang</a>
+                            </li>
+                        </ul>
+                    </div>
                 </td>
 
                 <!-- MAIN CONTENT -->
@@ -114,6 +235,22 @@
                             <span class="title-bar-buttons">_ &#9633; X</span>
                         </div>
                         <div class="popup-body">
+                            <div class="browser-greeting" id="browserGreeting">
+                                <img
+                                    class="greet-star"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/2/23/Knowledge_Is_Human_animated_star_rainbow.gif"
+                                    alt="star"
+                                />
+                                <span id="browserGreetingText"
+                                    >&#128075; HELLO, fellow netizen!</span
+                                >
+                                <img
+                                    class="greet-star"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/2/23/Knowledge_Is_Human_animated_star_rainbow.gif"
+                                    alt="star"
+                                />
+                            </div>
+
                             <section id="about">
                                 <h2 class="section-h">
                                     <span class="blink">&#9889;</span> A B O U T
@@ -211,6 +348,24 @@
                                     <tr>
                                         <td>
                                             <a
+                                                href="https://shramko.dev/"
+                                                target="_blank"
+                                                rel="noopener"
+                                                ><span class="blink"
+                                                    >&#11088;</span
+                                                >
+                                                shramko.dev &#11088;</a
+                                            >
+                                            <span class="new-badge">NEW!</span>
+                                        </td>
+                                        <td>
+                                            My <b>REAL</b> homepage on the
+                                            World Wide Web!!!
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a
                                                 href="https://github.com/shramkoweb"
                                                 target="_blank"
                                                 rel="noopener"
@@ -246,6 +401,7 @@
                                     S i G n &nbsp; M y &nbsp;
                                     G u E s T b 0 0 K
                                     <span class="blink">&#9999;&#65039;</span>
+                                    <span class="new-badge">NEW!</span>
                                 </h2>
                                 <form id="gbForm" autocomplete="off">
                                     <label
@@ -389,6 +545,105 @@
                     d.getFullYear();
                 document.getElementById('thisYear').textContent =
                     d.getFullYear();
+            })();
+
+            // Quote of the Day: random pick on each load
+            (function () {
+                var quotes = [
+                    '"The Internet is just a fad." &mdash; some1, 1995',
+                    '"You\'ve got mail!"',
+                    '"Frames are the future." &mdash; webmaster, 1997',
+                    '"All your base are belong to us."',
+                    '"Don\'t copy that floppy!"',
+                    '"56k modem 4 LYFE"',
+                    '"Trust me, I\'m an HTML programmer."',
+                    '"Ph34r my l33t sk1llz"',
+                    '"This page best viewed at 800x600"',
+                    '"Sharing files is RAD"',
+                ];
+                var q = quotes[Math.floor(Math.random() * quotes.length)];
+                document.getElementById('quoteOfDay').innerHTML = q;
+            })();
+
+            // Last Updated: a "freshly updated" timestamp every load
+            (function () {
+                var d = new Date();
+                var pad = function (n) {
+                    return n < 10 ? '0' + n : '' + n;
+                };
+                document.getElementById('lastUpdated').textContent =
+                    pad(d.getMonth() + 1) +
+                    '/' +
+                    pad(d.getDate()) +
+                    '/' +
+                    String(d.getFullYear()).slice(2) +
+                    ' @ ' +
+                    pad(d.getHours()) +
+                    ':' +
+                    pad(d.getMinutes());
+            })();
+
+            // Browser-detected greeting (very 90s "Welcome, [Browser] user!")
+            (function () {
+                var ua = navigator.userAgent;
+                var name = 'cyber';
+                if (/Edg\//.test(ua)) name = 'Edge';
+                else if (/OPR\//.test(ua) || /Opera/.test(ua)) name = 'Opera';
+                else if (/Firefox\//.test(ua)) name = 'Firefox';
+                else if (/Chrome\//.test(ua)) name = 'Chrome';
+                else if (/Safari\//.test(ua)) name = 'Safari';
+                var el = document.getElementById('browserGreetingText');
+                if (el) {
+                    el.innerHTML =
+                        '&#128075; HELLO, <b>' +
+                        name +
+                        '</b> user! &#128071; please upgrade 2 ' +
+                        '<span class="netscape">NETSCAPE NAVIGATOR 4</span> ' +
+                        '4 the best xperience!';
+                }
+            })();
+
+            // Fake VIRUS popup: appears after 6 seconds, dismissable
+            (function () {
+                var popup = document.getElementById('virusPopup');
+                var closeBtn = document.getElementById('virusClose');
+                var fixBtn = document.getElementById('virusFix');
+                if (!popup) return;
+                setTimeout(function () {
+                    popup.hidden = false;
+                }, 6000);
+                function hide() {
+                    popup.hidden = true;
+                }
+                closeBtn.addEventListener('click', hide);
+                fixBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    alert(
+                        'JK!!! There were no viruses. But there was THIS popup. Gotcha.'
+                    );
+                    hide();
+                });
+            })();
+
+            // Now Playing widget: tracks audio state
+            (function () {
+                var audio = document.getElementById('bgm');
+                var npEl = document.getElementById('nowPlaying');
+                if (!audio || !npEl) return;
+                function set(label, playing) {
+                    npEl.innerHTML = playing
+                        ? '<span class="blink">&#127925;</span> <b>' +
+                          label +
+                          '</b> <span class="blink">&#127925;</span>'
+                        : '<i>' + label + '</i>';
+                }
+                set('nothing yet... click ▶ to start!', false);
+                audio.addEventListener('play', function () {
+                    set('Tetris Theme (Korobeiniki)', true);
+                });
+                audio.addEventListener('pause', function () {
+                    set('-- paused --', false);
+                });
             })();
 
             // Guestbook: persists entries in localStorage
