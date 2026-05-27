@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>~*~ SerHii's HoMePaGe ~*~ :: Best Viewed in Netscape 4</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- A U D I O -->
+        <audio id="bgm" autoplay loop>
+            <source
+                src="https://archive.org/download/TetrisThemeMusic/Tetris.mp3"
+                type="audio/mpeg"
+            />
+        </audio>
+        <button id="mute" type="button" title="Mute / Unmute" aria-label="Mute">
+            <span id="muteIcon">&#128266;</span>
+        </button>
+
+        <!-- T O P    B A N N E R -->
+        <div class="topbanner">
+            <h1 class="rainbow-title">
+                <span class="title-emoji">&#128679;</span>
+                &#10024; SerHii's HoMePaGe &#10024;
+                <span class="title-emoji">&#128679;</span>
+            </h1>
+            <img
+                class="construction-banner"
+                src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Under-Construction-Bulldozer.gif"
+                alt="Under Construction"
+            />
+        </div>
+
+        <marquee
+            behavior="scroll"
+            direction="left"
+            scrollamount="8"
+            class="top-marquee"
+        >
+            &#127775; WELCOME 2 MY CORNER OF THE INFORMATION SUPERHIGHWAY!!1!
+            &#128293; SIGN MY GUESTBOOK &#128293; BEST VIEWED @ 800x600
+            &#127775; YOU ARE THE ~kewlest~ VISITOR EVER &#127775;
+        </marquee>
+
+        <!-- F R A M E   T A B L E   L A Y O U T  (very 90s) -->
+        <table class="layout" cellpadding="10" cellspacing="0">
+            <tr>
+                <!-- LEFT SIDEBAR -->
+                <td class="sidebar">
+                    <div class="box">
+                        <h3 class="box-title">&#9733; NAVIGATION &#9733;</h3>
+                        <ul class="nav-list">
+                            <li>
+                                <a href="#about">&#10148; About Me</a>
+                            </li>
+                            <li>
+                                <a href="#hobbies">&#10148; My Hobbies</a>
+                            </li>
+                            <li>
+                                <a href="#links">&#10148; Kewl Linkz</a>
+                            </li>
+                            <li>
+                                <a href="#guestbook">&#10148; Guestbook</a>
+                            </li>
+                            <li>
+                                <a href="../../index.html"
+                                    >&#10148; &laquo; Home &laquo;</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="box">
+                        <h3 class="box-title">&#128200; HIT COUNTER</h3>
+                        <div id="hitCounter" class="counter">0000000</div>
+                        <p class="tiny">You are visitor #<span id="visitorNum">1</span>!</p>
+                    </div>
+
+                    <div class="box">
+                        <h3 class="box-title">&#127919; WEB RING</h3>
+                        <p class="tiny center">
+                            <a href="#">&laquo; Prev</a> |
+                            <a href="#">Random</a> |
+                            <a href="#">Next &raquo;</a>
+                        </p>
+                        <img
+                            class="spin"
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"
+                            alt="spinning earth"
+                            width="80"
+                        />
+                    </div>
+
+                    <div class="box">
+                        <h3 class="box-title">&#128197; TODAY</h3>
+                        <p class="tiny center" id="todayDate"></p>
+                    </div>
+                </td>
+
+                <!-- MAIN CONTENT -->
+                <td class="main">
+                    <div class="popup-window">
+                        <div class="title-bar">
+                            <span class="title-bar-text"
+                                >SerHii.exe - Notepad</span
+                            >
+                            <span class="title-bar-buttons">_ &#9633; X</span>
+                        </div>
+                        <div class="popup-body">
+                            <section id="about">
+                                <h2 class="section-h">
+                                    <span class="blink">&#9889;</span> A B O U T
+                                    &nbsp; M E
+                                    <span class="blink">&#9889;</span>
+                                </h2>
+                                <img
+                                    class="dancing-baby"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Smiley-Dance.gif"
+                                    alt="dancing smiley"
+                                />
+                                <p>
+                                    <font color="#ff00ff" size="4"
+                                        ><b>H</b></font
+                                    ><font color="#00ffff" size="4"
+                                        ><b>e</b></font
+                                    ><font color="#ffff00" size="4"
+                                        ><b>l</b></font
+                                    ><font color="#ff0000" size="4"
+                                        ><b>l</b></font
+                                    ><font color="#00ff00" size="4"
+                                        ><b>o</b></font
+                                    >
+                                    <b>cyber surfer!!!</b> &#128375; My name is
+                                    <b><i>Serhii</i></b
+                                    > and U have just stumbled upon the most
+                                    <span class="blink">RAD</span> page on the
+                                    World Wide Web.
+                                </p>
+                                <p>
+                                    I built this site with my own 10 fingers
+                                    using <kbd>NoTeP4D</kbd> on my brand new
+                                    <b>PENTIUM II 233 MHz</b> &#128187; (with
+                                    MMX technology!!!). I have 64MB of RAM and
+                                    a 56k modem and I am NOT afraid 2 use
+                                    them.
+                                </p>
+                                <p class="warning">
+                                    &#9888;&#65039;
+                                    <span class="blink"
+                                        >THIS PAGE IS UNDER CONSTRUCTION
+                                        FOREVER</span
+                                    >
+                                    &#9888;&#65039;
+                                </p>
+                            </section>
+
+                            <hr class="flame-divider" />
+
+                            <section id="hobbies">
+                                <h2 class="section-h">
+                                    <span class="blink">&#128293;</span> MY
+                                    HoBBiEz
+                                    <span class="blink">&#128293;</span>
+                                </h2>
+                                <ul class="hobby-list">
+                                    <li>
+                                        &#9749; Drinking <b>coffee</b> by the
+                                        gallon
+                                    </li>
+                                    <li>
+                                        &#128187; Coding things that make my
+                                        computer go <i>BEEP</i>
+                                    </li>
+                                    <li>
+                                        &#127918; <span class="blink"
+                                            >Counter-Strike 1.6</span
+                                        >
+                                        (rush B, no stop)
+                                    </li>
+                                    <li>
+                                        &#128241; Trading Pokemon cards on the
+                                        playground
+                                    </li>
+                                    <li>
+                                        &#127925; Listening to my Walkman on
+                                        the bus
+                                    </li>
+                                    <li>
+                                        &#128126; Building this website
+                                        (obviously)
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <hr class="flame-divider" />
+
+                            <section id="links">
+                                <h2 class="section-h">
+                                    <span class="blink">&#127919;</span>
+                                    KeWL LiNkZ
+                                    <span class="blink">&#127919;</span>
+                                </h2>
+                                <table class="links-table">
+                                    <tr>
+                                        <td>
+                                            <a
+                                                href="https://github.com/shramkoweb"
+                                                target="_blank"
+                                                rel="noopener"
+                                                >My GitHub &#10145;</a
+                                            >
+                                        </td>
+                                        <td>The place where I keep my .txt files</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="../../index.html"
+                                                >&laquo; Back to Main Page</a
+                                            >
+                                        </td>
+                                        <td>Return to ye olde index</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" onclick="alert('404 :: Not Found!!! page does not exist in this dimension'); return false;"
+                                                >SECRET LINK</a
+                                            >
+                                        </td>
+                                        <td>do NOT click (you will)</td>
+                                    </tr>
+                                </table>
+                            </section>
+
+                            <hr class="flame-divider" />
+
+                            <section id="guestbook">
+                                <h2 class="section-h">
+                                    <span class="blink">&#9999;&#65039;</span>
+                                    S i G n &nbsp; M y &nbsp;
+                                    G u E s T b 0 0 K
+                                    <span class="blink">&#9999;&#65039;</span>
+                                </h2>
+                                <form
+                                    onsubmit="event.preventDefault(); document.getElementById('gbThanks').style.display='block';"
+                                >
+                                    <label
+                                        >Yer Name:
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            placeholder="xX_cyber_warrior_Xx"
+                                        />
+                                    </label>
+                                    <br />
+                                    <label
+                                        >Yer Email:
+                                        <input
+                                            type="text"
+                                            name="email"
+                                            placeholder="kewlguy@aol.com"
+                                        />
+                                    </label>
+                                    <br />
+                                    <label
+                                        >Yer Message:
+                                        <br />
+                                        <textarea
+                                            rows="4"
+                                            cols="40"
+                                            placeholder="ur page rulez!!1!"
+                                        ></textarea>
+                                    </label>
+                                    <br />
+                                    <button type="submit" class="vintage-btn">
+                                        &#128231; SUBMIT 2 GUESTBOOK
+                                    </button>
+                                </form>
+                                <p id="gbThanks" class="thanks">
+                                    &#127881; THANK U 4 SIGNING!!! Your message
+                                    is now eternal &#127881;
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- F O O T E R    B A D G E S -->
+        <div class="badges">
+            <a
+                href="https://en.wikipedia.org/wiki/Internet_Explorer"
+                target="_blank"
+                rel="noopener"
+                class="ie-badge-link"
+                title="Get Microsoft Internet Explorer NOW!"
+            >
+                <img
+                    class="ie-badge"
+                    src="best-viewed-ie.png"
+                    alt="Best Viewed with Microsoft Internet Explorer"
+                />
+            </a>
+            <span class="badge">
+                <span class="blink">&#128231;</span> Made with NOTEPAD
+            </span>
+            <span class="badge">
+                Best Viewed in
+                <span class="netscape">NETSCAPE&nbsp;NAVIGATOR 4.0</span>
+            </span>
+            <span class="badge">
+                <b>HTML 4.01</b> Compliant!
+            </span>
+            <span class="badge">
+                &#128421;&#65039; 800 x 600
+            </span>
+            <span class="badge">
+                &#127760; W3C? never heard of her
+            </span>
+        </div>
+
+        <p class="copyright">
+            &copy; 1996-<span id="thisYear"></span> SerHii&trade; -- All Wrongs
+            Reserved -- This page took 4 hours 2 load on yer 56k modem, sorry
+            not sorry
+        </p>
+
+        <p class="copyright">
+            <a href="../../index.html" class="vintage-btn" style="text-decoration:none"
+                >&laquo;&laquo; Back to Main Page &laquo;&laquo;</a
+            >
+        </p>
+
+        <!-- S C R I P T S -->
+        <script>
+            // Hit counter via localStorage - increment ONCE per page load
+            var visitorNumber = (function incrementCount() {
+                var n = parseInt(
+                    localStorage.getItem('shramko_visits') || '1336',
+                    10
+                );
+                n = isNaN(n) ? 1337 : n + 1;
+                localStorage.setItem('shramko_visits', String(n));
+                return n;
+            })();
+
+            (function paintCounter() {
+                var pad = ('0000000' + visitorNumber).slice(-7);
+                document.getElementById('hitCounter').textContent = pad;
+                document.getElementById('visitorNum').textContent =
+                    visitorNumber;
+            })();
+
+            // Welcome popup (authentic 90s annoyance)
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    alert(
+                        "★彡 WELCOME 2 SERHII'S HOMEPAGE!!! 彡★\n\nYou are visitor #" +
+                            visitorNumber +
+                            "!\n\nPlease sign my guestbook on yer way out!"
+                    );
+                }, 250);
+            });
+
+            // Today's date in old-school format
+            (function () {
+                var d = new Date();
+                var months = [
+                    'JAN',
+                    'FEB',
+                    'MAR',
+                    'APR',
+                    'MAY',
+                    'JUN',
+                    'JUL',
+                    'AUG',
+                    'SEP',
+                    'OCT',
+                    'NOV',
+                    'DEC',
+                ];
+                document.getElementById('todayDate').textContent =
+                    months[d.getMonth()] +
+                    ' ' +
+                    d.getDate() +
+                    ', ' +
+                    d.getFullYear();
+                document.getElementById('thisYear').textContent =
+                    d.getFullYear();
+            })();
+
+            // Mute toggle
+            (function () {
+                var audio = document.getElementById('bgm');
+                var btn = document.getElementById('mute');
+                var icon = document.getElementById('muteIcon');
+                audio.volume = 0.35;
+                btn.addEventListener('click', function () {
+                    audio.muted = !audio.muted;
+                    if (audio.muted) {
+                        icon.innerHTML = '&#128263;'; // muted speaker
+                    } else {
+                        icon.innerHTML = '&#128266;'; // loud speaker
+                        // try to start playback if autoplay was blocked
+                        audio.play().catch(function () {});
+                    }
+                });
+                // attempt to unblock audio on first user interaction
+                document.addEventListener(
+                    'click',
+                    function once() {
+                        audio.play().catch(function () {});
+                        document.removeEventListener('click', once);
+                    },
+                    { once: true }
+                );
+            })();
+
+            // Sparkle cursor trail
+            (function () {
+                var sparkles = ['✨', '★', '✯', '✴', '·'];
+                var lastTime = 0;
+                document.addEventListener('mousemove', function (e) {
+                    var now = Date.now();
+                    if (now - lastTime < 35) return;
+                    lastTime = now;
+                    var s = document.createElement('span');
+                    s.className = 'sparkle';
+                    s.textContent =
+                        sparkles[Math.floor(Math.random() * sparkles.length)];
+                    s.style.left = e.clientX + 'px';
+                    s.style.top = e.clientY + 'px';
+                    s.style.color =
+                        'hsl(' + Math.floor(Math.random() * 360) + ', 100%, 65%)';
+                    document.body.appendChild(s);
+                    setTimeout(function () {
+                        s.remove();
+                    }, 900);
+                });
+            })();
+        </script>
+    </body>
+</html>
