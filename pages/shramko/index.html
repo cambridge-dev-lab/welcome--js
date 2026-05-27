@@ -247,14 +247,14 @@
                                     G u E s T b 0 0 K
                                     <span class="blink">&#9999;&#65039;</span>
                                 </h2>
-                                <form
-                                    onsubmit="event.preventDefault(); document.getElementById('gbThanks').style.display='block';"
-                                >
+                                <form id="gbForm" autocomplete="off">
                                     <label
                                         >Yer Name:
                                         <input
+                                            id="gbName"
                                             type="text"
-                                            name="name"
+                                            maxlength="40"
+                                            required
                                             placeholder="xX_cyber_warrior_Xx"
                                         />
                                     </label>
@@ -262,8 +262,9 @@
                                     <label
                                         >Yer Email:
                                         <input
+                                            id="gbEmail"
                                             type="text"
-                                            name="email"
+                                            maxlength="60"
                                             placeholder="kewlguy@aol.com"
                                         />
                                     </label>
@@ -272,8 +273,11 @@
                                         >Yer Message:
                                         <br />
                                         <textarea
+                                            id="gbMessage"
                                             rows="4"
                                             cols="40"
+                                            maxlength="500"
+                                            required
                                             placeholder="ur page rulez!!1!"
                                         ></textarea>
                                     </label>
@@ -282,10 +286,12 @@
                                         &#128231; SUBMIT 2 GUESTBOOK
                                     </button>
                                 </form>
-                                <p id="gbThanks" class="thanks">
-                                    &#127881; THANK U 4 SIGNING!!! Your message
-                                    is now eternal &#127881;
-                                </p>
+
+                                <h3 class="gb-entries-title">
+                                    &#128220; S I G N E D &nbsp; B Y
+                                    (<span id="gbCount">0</span>)
+                                </h3>
+                                <div id="gbEntries" class="gb-entries"></div>
                             </section>
                         </div>
                     </div>
@@ -358,17 +364,6 @@
                     visitorNumber;
             })();
 
-            // Welcome popup (authentic 90s annoyance)
-            window.addEventListener('load', function () {
-                setTimeout(function () {
-                    alert(
-                        "★彡 WELCOME 2 SERHII'S HOMEPAGE!!! 彡★\n\nYou are visitor #" +
-                            visitorNumber +
-                            "!\n\nPlease sign my guestbook on yer way out!"
-                    );
-                }, 250);
-            });
-
             // Today's date in old-school format
             (function () {
                 var d = new Date();
@@ -394,6 +389,111 @@
                     d.getFullYear();
                 document.getElementById('thisYear').textContent =
                     d.getFullYear();
+            })();
+
+            // Guestbook: persists entries in localStorage
+            (function guestbook() {
+                var STORAGE_KEY = 'shramko_guestbook';
+                var form = document.getElementById('gbForm');
+                var nameEl = document.getElementById('gbName');
+                var emailEl = document.getElementById('gbEmail');
+                var msgEl = document.getElementById('gbMessage');
+                var listEl = document.getElementById('gbEntries');
+                var countEl = document.getElementById('gbCount');
+
+                function load() {
+                    try {
+                        return JSON.parse(
+                            localStorage.getItem(STORAGE_KEY) || '[]'
+                        );
+                    } catch (_) {
+                        return [];
+                    }
+                }
+                function save(entries) {
+                    localStorage.setItem(
+                        STORAGE_KEY,
+                        JSON.stringify(entries)
+                    );
+                }
+                function esc(s) {
+                    return String(s)
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;')
+                        .replace(/"/g, '&quot;');
+                }
+                function fmtDate(ts) {
+                    var d = new Date(ts);
+                    return d.toLocaleString();
+                }
+
+                function render() {
+                    var entries = load();
+                    countEl.textContent = entries.length;
+                    if (!entries.length) {
+                        listEl.innerHTML =
+                            '<p class="gb-empty">~* no signatures yet... B the 1st 2 sign!!! *~</p>';
+                        return;
+                    }
+                    listEl.innerHTML = entries
+                        .map(function (e, i) {
+                            return (
+                                '<div class="gb-entry">' +
+                                '<div class="gb-entry-header">' +
+                                '<b class="gb-entry-name">' +
+                                esc(e.name) +
+                                '</b>' +
+                                (e.email
+                                    ? ' &lt;<i>' + esc(e.email) + '</i>&gt;'
+                                    : '') +
+                                '<span class="gb-entry-date"> &#9200; ' +
+                                esc(fmtDate(e.ts)) +
+                                '</span>' +
+                                '<button type="button" class="gb-delete" data-i="' +
+                                i +
+                                '" title="Delete entry">X</button>' +
+                                '</div>' +
+                                '<div class="gb-entry-body">' +
+                                esc(e.message).replace(/\n/g, '<br>') +
+                                '</div>' +
+                                '</div>'
+                            );
+                        })
+                        .join('');
+                }
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var name = nameEl.value.trim();
+                    var message = msgEl.value.trim();
+                    if (!name || !message) return;
+                    var entries = load();
+                    entries.unshift({
+                        name: name,
+                        email: emailEl.value.trim(),
+                        message: message,
+                        ts: Date.now(),
+                    });
+                    save(entries);
+                    nameEl.value = '';
+                    emailEl.value = '';
+                    msgEl.value = '';
+                    render();
+                });
+
+                listEl.addEventListener('click', function (e) {
+                    var t = e.target;
+                    if (t && t.classList.contains('gb-delete')) {
+                        var i = parseInt(t.getAttribute('data-i'), 10);
+                        var entries = load();
+                        entries.splice(i, 1);
+                        save(entries);
+                        render();
+                    }
+                });
+
+                render();
             })();
 
             // Audio: play/pause toggle + seamless loop. Music does NOT

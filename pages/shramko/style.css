@@ -419,16 +419,93 @@ form textarea {
     border-style: inset;
 }
 
-.thanks {
-    display: none;
-    margin-top: 10px;
-    background: #00ff00;
+/* === GUESTBOOK ENTRIES === */
+.gb-entries-title {
+    margin: 18px 0 8px;
+    padding: 6px 10px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
     color: #000;
-    padding: 8px;
-    font-weight: bold;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 2px;
     text-align: center;
-    border: 3px ridge lime;
-    animation: rainbow 4s linear infinite;
+    border: 3px ridge yellow;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.gb-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gb-empty {
+    text-align: center;
+    color: #800080;
+    font-style: italic;
+    padding: 12px;
+    background: #ffffe0;
+    border: 2px dashed #ff00ff;
+}
+
+.gb-entry {
+    background: #fffbe0;
+    border: 3px ridge #ff00ff;
+    padding: 8px 10px;
+    box-shadow: 3px 3px 0 #00ffff;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+.gb-entry-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px dotted #800080;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #000080;
+}
+
+.gb-entry-name {
+    color: #ff0080;
+    font-size: 16px;
+}
+
+.gb-entry-date {
+    color: #555;
+    font-size: 12px;
+    margin-left: auto;
+    font-family: 'Courier New', monospace;
+}
+
+.gb-entry-body {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 15px;
+    color: #111;
+    white-space: pre-wrap;
+}
+
+.gb-delete {
+    background: #c00;
+    color: #fff;
+    border: 2px outset #fff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0 6px;
+    margin-left: 4px;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.gb-delete:hover {
+    background: #f00;
+}
+
+.gb-delete:active {
+    border-style: inset;
 }
 
 /* === FOOTER BADGES === */
