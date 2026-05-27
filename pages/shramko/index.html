@@ -9,14 +9,19 @@
     </head>
     <body>
         <!-- A U D I O -->
-        <audio id="bgm" autoplay loop>
+        <audio id="bgm" preload="auto">
             <source
                 src="https://archive.org/download/TetrisThemeMusic/Tetris.mp3"
                 type="audio/mpeg"
             />
         </audio>
-        <button id="mute" type="button" title="Mute / Unmute" aria-label="Mute">
-            <span id="muteIcon">&#128266;</span>
+        <button
+            id="mute"
+            type="button"
+            title="Click to play music!"
+            aria-label="Play music"
+        >
+            <span id="muteIcon">&#9658;</span>
         </button>
 
         <!-- T O P    B A N N E R -->
@@ -391,31 +396,60 @@
                     d.getFullYear();
             })();
 
-            // Mute toggle
+            // Audio: play/pause toggle + seamless loop. Music does NOT
+            // start until the user clicks the floating button.
             (function () {
                 var audio = document.getElementById('bgm');
                 var btn = document.getElementById('mute');
                 var icon = document.getElementById('muteIcon');
                 audio.volume = 0.35;
-                btn.addEventListener('click', function () {
-                    audio.muted = !audio.muted;
-                    if (audio.muted) {
-                        icon.innerHTML = '&#128263;'; // muted speaker
-                    } else {
-                        icon.innerHTML = '&#128266;'; // loud speaker
-                        // try to start playback if autoplay was blocked
-                        audio.play().catch(function () {});
+
+                // Seamless loop: seek back to 0 just before natural end so
+                // the browser never hits end-of-stream (no gap).
+                var REWIND_AT = 0.18;
+                audio.addEventListener('timeupdate', function () {
+                    if (
+                        audio.duration &&
+                        isFinite(audio.duration) &&
+                        audio.currentTime >= audio.duration - REWIND_AT
+                    ) {
+                        audio.currentTime = 0;
                     }
                 });
-                // attempt to unblock audio on first user interaction
-                document.addEventListener(
-                    'click',
-                    function once() {
-                        audio.play().catch(function () {});
-                        document.removeEventListener('click', once);
-                    },
-                    { once: true }
-                );
+                audio.addEventListener('ended', function () {
+                    audio.currentTime = 0;
+                    audio.play().catch(function () {});
+                });
+
+                function setPlayingUI(playing) {
+                    icon.innerHTML = playing ? '&#128266;' : '&#9658;';
+                    btn.title = playing
+                        ? 'Click to pause music'
+                        : 'Click to play music!';
+                    btn.setAttribute(
+                        'aria-label',
+                        playing ? 'Pause music' : 'Play music'
+                    );
+                }
+
+                btn.addEventListener('click', function () {
+                    if (audio.paused) {
+                        audio.play().then(function () {
+                            setPlayingUI(true);
+                        }).catch(function () {});
+                    } else {
+                        audio.pause();
+                        setPlayingUI(false);
+                    }
+                });
+
+                // Keep UI honest if playback state changes for any reason
+                audio.addEventListener('play', function () {
+                    setPlayingUI(true);
+                });
+                audio.addEventListener('pause', function () {
+                    setPlayingUI(false);
+                });
             })();
 
             // Sparkle cursor trail
