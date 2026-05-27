@@ -92,6 +92,10 @@ body {
 .card__text--white {
   color: white;
 }
+
+.card__text--black {
+  color: black;
+}
 .card__message {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
