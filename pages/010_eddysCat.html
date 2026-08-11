@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Neko</title>
+        <link rel="stylesheet" href="010_eddysCat.css">
+
+	</head>
+	<body>
+		<video id = "video" autoplay loop playsinline>
+			<source src="../resources/rave_feline.mp4" type="video/mp4">
+		</video>
+	
+	</body>
+
+	<script>
+		const video = document.getElementById("video");
+		video.volume = 1.0;
+		document.addEventListener("mousedown", () => {
+			
+			video.play();
+		});
+
+		document.addEventListener("mouseup", () => {
+			video.pause();
+			video.currentTime = 0;
+		});
+	</script>
+</html>
