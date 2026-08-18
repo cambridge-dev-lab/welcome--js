@@ -1,0 +1,47 @@
+.edd_base_text {
+    font-weight: bold;
+
+    padding: 1.7rem 1.2rem;
+    position: absolute;
+}
+
+.edd_text1{
+    color: #FF00FF;
+
+    font-size: 35px;
+    letter-spacing: 8px;
+
+    transform: rotate(43deg);
+    text-shadow: 4px 4px yellow;
+    
+    bottom: 12px;
+    left: 7px;
+}
+
+.edd_text2{
+    color: orange;
+
+    font-size: 0x;
+    letter-spacing: 2px;
+
+    transform: rotate(-27deg);
+    text-shadow: 4px 4px turquoise;
+    
+    bottom: 79px;
+    left: 132px;
+}
+  
+.edd_text3{
+    color: pink;
+
+    font-size: 35px;
+    letter-spacing: 4px;
+
+    transform: rotate(553deg);
+    text-shadow: 4px 4px Lime;
+    
+    top: -30px;
+    left: 106px;
+}
+  
+  
