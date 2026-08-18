@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html class="eddysHtml" lang="en">
+	<head class="eddysHead">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Neko</title>
+        <link rel="stylesheet" href="010_eddysCat.css">
+
+	</head>
+	<body>
+		<video class="eddysVid" id = "video" autoplay loop playsinline>
+			<source src="https://github.com/edsun123/Assets/releases/download/v1.0.0/rave_feline.mp4" type="video/mp4">
+		</video>
+	
+	</body>
+
+	<script>
+		const video = document.getElementById("video");
+		video.volume = 1.0;
+		document.addEventListener("mousedown", () => {
+			
+			video.play();
+		});
+
+		document.addEventListener("mouseup", () => {
+			video.pause();
+			video.currentTime = 0;
+		});
+	</script>
+</html>
