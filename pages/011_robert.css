@@ -50,6 +50,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .hero__name {
@@ -59,6 +60,9 @@ body {
 .hero__loc {
   font-size: 1.1rem;
   color: #a8c5a0;
+}
+
+.hero__tag {
 }
 
 .hero__btns {
