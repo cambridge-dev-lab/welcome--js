@@ -28,8 +28,8 @@ body {
   right: 2.5rem;
   top: 1rem;
   height: var(--header-height);
-  display:flex; 
-  align-items:center; 
+  display:flex;
+  align-items:center;
   justify-content:center;
   color: rgba(41, 102, 222, 1);
   cursor: pointer;
